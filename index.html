@@ -9,31 +9,84 @@
     <meta name="Karol Szczepaniak" content="">
     <title>System rezerwacji wizyt u lekarza</title>
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script>
+  $( function() {
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
   </head>
   <body>
     <header>
       <h1>System rezerwacji u lekarza</h1>
     </header>
 
-    <input list="specjalizacje" name="spec">
-     <datalist id="specjalizacje">
-      <option value="Ginekolog">
-      <option value="Stomatolog">
-      <option value="Ortopeda">
-      <option value="Chirurg">
-    </datalist>
+    <div class="ui-widget">
+     <label for="tags">Tags: </label>
+     <input id="tags" class="ui-autocomplete-input" autocomplete="off">
+    </div>
 
-    <input list="miasta" name="miasta">
-     <datalist id="miasta">
-      <option value="Warszawa">
-      <option value="Krakow">
-      <option value="Chrome">
-      <option value="Lodz">
-      <option value="Wroclaw">
-     </datalist>
-   <input type="submit" name="Szukaj">
-
-
+    <ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none; top: 32px; left: 50.6875px; width: 197px;">
+     <li class="ui-menu-item">
+      <div id="ui-id-51" tabindex="-1" class="ui-menu-item-wrapper">ActionScript</div>
+     </li>
+     <li class="ui-menu-item">
+      <div id="ui-id-52" tabindex="-1" class="ui-menu-item-wrapper">AppleScript</div>
+     </li>
+     <li class="ui-menu-item">
+      <div id="ui-id-53" tabindex="-1" class="ui-menu-item-wrapper">Asp</div>
+     </li>
+     <li class="ui-menu-item">
+      <div id="ui-id-54" tabindex="-1" class="ui-menu-item-wrapper">BASIC</div>
+     </li>
+     <li class="ui-menu-item">
+      <div id="ui-id-55" tabindex="-1" class="ui-menu-item-wrapper">ColdFusion</div>
+     </li>
+     <li class="ui-menu-item">
+      <div id="ui-id-56" tabindex="-1" class="ui-menu-item-wrapper">Haskell</div>
+     </li>
+     <li class="ui-menu-item">
+      <div id="ui-id-57" tabindex="-1" class="ui-menu-item-wrapper">JavaScript</div>
+     </li>
+     <li class="ui-menu-item">
+      <div id="ui-id-58" tabindex="-1" class="ui-menu-item-wrapper">Lisp</div>
+     </li>
+     <li class="ui-menu-item">
+      <div id="ui-id-59" tabindex="-1" class="ui-menu-item-wrapper">Scala</div>
+     </li>
+     <li class="ui-menu-item">
+      <div id="ui-id-60" tabindex="-1" class="ui-menu-item-wrapper">Scheme</div>
+     </li>
+  </ul>
 
 <footer>
   <p>&copy; System rezerwacji wizyt u lekarza 2017</p>
