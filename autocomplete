@@ -1,0 +1,23 @@
+
+// w tablicy przechowujemy specjalizacje 
+var data = [
+	"chirurg",
+	"dermatolog",
+	"stomatolog",
+	"urolog",
+	"ginekolog",
+	"laryngolog"
+	];
+
+
+// jesli DOM jest zaladowany to mozna wykonac funkcje
+$(document).ready(
+
+	function(){
+		$("#specjalizacja").autocomplete({
+			 source:data,
+			 autoFocus: true,
+			 minLength: 2,
+	});
+	}
+);
