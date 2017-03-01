@@ -1,5 +1,4 @@
-
-// w tablicy przechowujemy specjalizacje 
+// w tablicy data przechowujemy specjalizacje
 var data = [
 	"chirurg",
 	"dermatolog",
@@ -7,17 +6,26 @@ var data = [
 	"urolog",
 	"ginekolog",
 	"laryngolog"
-	];
+];
 
-
-// jesli DOM jest zaladowany to mozna wykonac funkcje
+// jesli DOM jest zaladowany to mozna wykonac funkcje autocomplete (jquery)
 $(document).ready(
-
-	function(){
+	function() {
 		$("#specjalizacja").autocomplete({
-			 source:data,
-			 autoFocus: true,
-			 minLength: 2,
-	});
+			source: data,
+			autoFocus: true,
+			minLength: 2,
+		});
 	}
 );
+
+// wyswietlenie wszystkich specjalizacji po kliknieciu
+$(function() {
+
+	$('#specjalizacja').autocomplete({
+		minLength: 0
+	});
+	$('#specjalizacja').click(function() {
+		$(this).autocomplete("search", "");
+	});
+});
