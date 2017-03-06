@@ -10,22 +10,28 @@
     <title>System rezerwacji wizyt u lekarza</title>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-    <script type="text/javascript" src="autocomplete"></script>
+    <script type="text/javascript" src="autocomplete.js"></script>
   </head>
   <body>
-    <header>
-      <h1>System rezerwacji u lekarza</h1>
-    </header>
-    <form>
-      <label for="spec">Wybierz spejalnosc lekarza
-        <input type="text" id="specjalizacja" name="specjalizacja" placeholder="chirurg">
-      </label>
-    </form>
-    <footer>
-      <p>&copy; System rezerwacji wizyt u lekarza 2017</p>
-    </footer>
-    <!-- java script-->
+    <div class="container">
+      <div class="starter-template">
+        <header>
+          <h1>System rezerwacji u lekarza</h1>
+        </header>
+        <form>
+          <label for="spec">Wybierz specjalność lekarza i miasto
+            <input type="text" id="specjalizacja" name="specjalizacja" placeholder="np. chirurg">
+            <input type="text" id="miasto" name="miasto" placeholder="np. warszawa">
+          </label>
+        </form>
+        <footer>
+          <p>&copy; System rezerwacji wizyt u lekarza 2017</p>
+        </footer>
+      </div>
+    </div>
   </body>
 </html>
